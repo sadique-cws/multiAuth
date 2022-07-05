@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Hash;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Patient extends Authenticatable
+class Doctor extends Authenticatable
 {
     use HasFactory;
 
-    protected $fillable = ["contact","name","email","address","password"];
+    protected $guarded = [];
 
     public function setPasswordAttribute($value){
         $this->attributes['password'] = Hash::make($value);
