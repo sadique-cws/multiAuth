@@ -88,7 +88,7 @@ class PublicController extends Controller
         return redirect()->route('doctorLogin');
     }
     public function patientLogout(){
-        Auth::guard("Patient")->logout();
+        Auth::guard("patient")->logout();
         return redirect()->route('patientLogin');
     }
 }
